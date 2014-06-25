@@ -2,7 +2,7 @@
 source "http://rubygems.org"
 
 # gem "rails"
-gem 'sanitize', '2.0.0'
+gem 'sanitize'
 gem 'gollum', "3.0.0", require: 'gollum/app'
 gem 'rack-rewrite', require: 'rack/rewrite'
 gem 'sinatra', require: 'sinatra/base'

@@ -11,7 +11,7 @@ class Wiki < Precious::App
     Gollum::Wiki.default_committer_email = session[:user]['email']
   end
   get '/' do
-    show_page_or_file('Welcome')
+    show_page_or_file('Home')
   end
 end
 

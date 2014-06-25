@@ -4,4 +4,3 @@
 .foreman
 .env
 bin/*
-config/application.yml

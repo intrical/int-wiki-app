@@ -17,6 +17,7 @@ class App < Sinatra::Base
   use OmniAuth::Builder do
     provider :google_apps, store: OpenID::Store::Filesystem.new('/tmp'),
                            domain: CONFIG[:google][:domain]
+    provider :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"]
   end
 
   helpers do
@@ -39,14 +40,14 @@ class App < Sinatra::Base
     end
   end
 
-  post '/auth/google_oauth2/callback' do
+  get '/auth/google_oauth2/callback' do
     unless auth_hash[:provider] == 'google_oauth2'
       403
     end
 
-    user = auth_hash['info']
-    if email = user['email'] && email.end_with?("@#{CONFIG[:google][:domain]}")
-      session[:user] = user
+    user = session[:user] = auth_hash['info']
+
+    if user['email'].end_with?("@#{CONFIG[:google][:domain]}")
       redirect '/'
     else
       session.clear

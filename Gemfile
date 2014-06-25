@@ -10,6 +10,7 @@ gem 'activesupport', require: 'active_support/core_ext/hash'
 gem 'omniauth'
 gem 'oa-openid', require: 'openid/store/filesystem'
 gem 'omniauth-google-apps'
+gem 'omniauth-google-oauth2'
 
 gem 'foreman'
 gem "unicorn"

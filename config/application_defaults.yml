@@ -12,14 +12,11 @@ gollum:
   # location.
   repo_path: <%= ENV['GOLLUM_REPO_PATH'] %>
 
-google:   
+google:
   # If a plain OpenID flow is used, require logins from this domain.
-  domain: <%= ENV['GOOGLE_AUTH_DOMAIN'] || 'salesforce.com' %>
+  domain: <%= ENV['GOOGLE_AUTH_DOMAIN'] || 'intrical.us' %>
 
   # OAuth keys for OAuth based login.
   # If either of these are nil, oAuth2 will not be available.
   oauth2_key: <%= ENV['GOOGLE_OAUTH2_KEY'] %>
   oauth2_secret: <%= ENV['GOOGLE_OAUTH2_SECRET'] %>
-  
-  
-

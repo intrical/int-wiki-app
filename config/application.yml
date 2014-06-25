@@ -1,11 +1,9 @@
 gollum:
-  repo_path: '../../int-wiki-content'
+  repo_path: '../int-wiki-content'
 
-google:   
+google:
   # If a plain OpenID flow is used, require logins from this domain.
   domain: 'intrical.us'
 
 session:
   secret: 'SOMETHING_SECURE' #edit this upon deployment
-
-

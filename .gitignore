@@ -3,4 +3,5 @@
 .DS_Store
 .foreman
 .env
+Gemfile.lock
 bin/*

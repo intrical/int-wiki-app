@@ -10,7 +10,7 @@ cd int-wiki-app
 bundle update
 ```
 ## Content repo
-As committed here, a repo for wiki content (int-wiki-content) is expected alongside the int-wiki-app repo. After initial deployment, this should probably be cloned from the (private) Github remote (unless we're purging for some reason).
+As configured in ```config/application.yml```, a repo for wiki content (int-wiki-content) is expected alongside the int-wiki-app repo. After initial deployment, this should probably be cloned from the (private) Github remote (unless we're purging for some reason).
 
 ```bash
 git clone https://github.com/intrical/int-wiki-content

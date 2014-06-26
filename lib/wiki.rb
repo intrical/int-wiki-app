@@ -1,8 +1,9 @@
 class Wiki < Precious::App
   set :gollum_path, CONFIG[:gollum][:repo_path]
   set :wiki_options, {}
-  use Rack::Session::Cookie, key: CONFIG[:session][:key],
-                             secret: CONFIG[:session][:secret]
+  use Rack::Session::Cookie,
+    key: CONFIG[:session][:key],
+    secret: CONFIG[:session][:secret]
   before do
     if not session[:user]
       redirect '/'
@@ -14,4 +15,3 @@ class Wiki < Precious::App
     show_page_or_file('Home')
   end
 end
-

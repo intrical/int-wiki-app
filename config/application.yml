@@ -1,8 +1,8 @@
 gollum:
   repo_path: '../int-wiki-content'
+  base_path: 'wiki'
 
 google:
-  # If a plain OpenID flow is used, require logins from this domain.
   domain: 'intrical.us'
 
 session:

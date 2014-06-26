@@ -4,6 +4,7 @@ source "http://rubygems.org"
 # gem "rails"
 gem 'sanitize'
 gem 'gollum', "3.0.0", require: 'gollum/app'
+gem 'redcarpet'
 gem 'rack-rewrite', require: 'rack/rewrite'
 gem 'sinatra', require: 'sinatra/base'
 gem 'activesupport', require: 'active_support/core_ext/hash'

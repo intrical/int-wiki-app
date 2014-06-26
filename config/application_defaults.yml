@@ -11,6 +11,9 @@ gollum:
   # NOTE: You're responsible for initializing a repository at this
   # location.
   repo_path: <%= ENV['GOLLUM_REPO_PATH'] %>
+  live_preview: true
+  base_path: 'wiki'
+  css: 'style/intrical.css'
 
 google:
   # If a plain OpenID flow is used, require logins from this domain.
